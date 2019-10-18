@@ -1,2 +1,0 @@
-# new
-udacity nanodegree project 
