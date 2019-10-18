@@ -1,0 +1,24 @@
+<html>
+<head>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+    <body>
+    
+        <section id="contact"><div class="contain1">
+            <article id="server1">
+            <h1>Category app</h1>
+            </article>
+            
+             </div></section>
+
+<div id="description">
+{% for i in items %}
+<h1>{{i.iname}}</h1><br>
+<br>
+<p>{{i.description}}</p>
+{% endfor %}
+</div>
+
+    </body>
+</html>

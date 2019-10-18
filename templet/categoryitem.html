@@ -1,0 +1,39 @@
+<html>
+<head>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+    <body>
+        <section id="contact"><div class="contain1">
+<article id="server1">
+<h1>Category app</h1>
+</article>
+
+
+        </div></section>
+        <div class="component">
+<footer>
+<article id="category">
+
+       <h1>Categories</h1>
+       <br>
+        {% for i in categories %}
+        <a href ="{{url_for('categoryitem' ,category_name = i.cname)}}"><p>{{i.cname}}</p></a>
+       {% endfor %}
+
+    </article>
+<article id="items">{{category.cname}}
+<h1> Items</h1>
+<br>
+{% for cat in category %}
+{% for item in items %}
+{% if item.category_id == cat.id %}
+<a href ="{{url_for('discription', category_name = cat.cname, item_name = item.iname)}}">{{item.iname}}</a><br>
+{% endif %}    
+{% endfor %}
+{% endfor %}
+</article>
+</footer>
+</div>
+    </body>
+</html>

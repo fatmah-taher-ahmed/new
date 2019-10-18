@@ -1,0 +1,39 @@
+<html>
+<head>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+    <body>
+        <section id="contact"><div class="contain1">
+<article id="server1">
+<h1>Category app</h1>
+</article>
+
+<a href="{{url_for('showLogin')}}"><input type="button" value="login"></a>
+        </div></section>
+        <div class="component">
+<footer>
+<article id="category">
+        <h1>Category</h1>
+        <br>
+        {% for i in categories %}
+        <a href ="{{url_for('categoryitem', category_name = i.cname )}}"><p>{{i.cname}}</p></a>
+        {% endfor %}
+
+</article>
+
+<article id="items">
+<h1>Latest Items</h1>
+<br>
+{% for i in items %}
+<a href="#">{{i.iname}}
+({{i.cname}})<br></a>
+{% endfor %}
+</article>
+
+
+</footer>
+</div>
+
+    </body>
+</html

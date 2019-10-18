@@ -1,0 +1,26 @@
+<html>
+<head>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+    <body>
+        <section id="contact"><div class="contain1">
+<article id="server1">
+<h1>Category app</h1>
+</article>
+  </div></section>
+
+<br>
+<div id="description">
+{%   for i in items        %}
+<h1>{{i.iname}}</h1><br>
+<br>
+<p>{{i.description}}</p><br>
+<a href="{{url_for('edititems',category_name=i.iname,items_name=i.iname)}}">Edit</a><b style="color: red;font-size: 30px;">|</b>
+<a href="{{url_for('deletitems',category_name=i.iname,items_name=i.iname)}}">Delete</a>
+
+    {% endfor %}
+
+</div>
+    </body>
+</html>

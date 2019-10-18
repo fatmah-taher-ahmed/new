@@ -1,0 +1,43 @@
+<html>
+<head>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+    <body>
+            <section id="contact"><div class="contain1">
+                    <article id="server1">
+                    <h1>Category app</h1>
+                    </article>
+                           </div></section>
+        <form action= "{{url_for('edititems', category_name = category_name ,items_name=items_name)}}" method = 'POST'>
+
+            <div id="edit">
+                <h1>Edit Item</h1>
+                <br>
+              <p>  title:</p>
+            <input type = 'text' size='30' name = 'name' placeholder = '{{item.iname}}' >
+           <br><br>
+          <p>description</p>
+
+            <input type = 'text' size='30' name = 'description' placeholder = '{{item.description}}' >
+            <br><br><p>Category</p>
+            <select name="categories_select" >
+               <option>Soccer</option>
+               <option>Goggle</option>
+               
+               <option>Frisbee</option>
+               <option>Hockey</option>
+               <option>Basketball</option>
+               <option>Snowboarding</option>
+
+               <option>Skating</option>
+               <option>Foosball</option>
+               <option>Rockcliming</option>
+
+            </select>
+            <br><br>
+            <input  type='submit' value='submit'></div>
+            </form>
+          
+    </body>
+</html>
